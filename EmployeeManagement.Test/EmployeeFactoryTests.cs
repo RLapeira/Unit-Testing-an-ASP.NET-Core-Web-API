@@ -15,7 +15,7 @@ namespace EmployeeManagement.Test
             var employee = (InternalEmployee)employeeFactory.CreateEmployee("Kevin", "Dockx");
 
             // Assert
-            Assert.Equal(5000, employee.Salary);
+            Assert.Equal(2500, employee.Salary);
         }
     }
 }
