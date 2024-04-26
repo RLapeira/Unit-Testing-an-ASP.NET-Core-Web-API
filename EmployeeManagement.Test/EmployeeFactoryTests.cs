@@ -73,5 +73,20 @@ namespace EmployeeManagement.Test
             Assert.Equal(2500, employee.Salary, 0);
             // 0 indicates the number of decimals that the assert has in mind
         }
+
+        [Fact]
+        public void CreateEmployee_IsExternalIsTrue_ReturnTypeMustBeExternalEmployee()
+        {
+            // Arrange
+            var factory = new EmployeeFactory();
+
+            // Act
+            var employee = factory.CreateEmployee("Kevin", "Dockx", "Marvin", true);
+
+            // Assert
+            Assert.IsType<ExternalEmployee>(employee);
+            //Assert.IsAssignableFrom<Employee>(employee);
+            // True if employee is an object of Employee or a subclass
+        }
     }
 }
