@@ -7,7 +7,8 @@ using EmployeeManagement.Test.Fixtures;
 
 namespace EmployeeManagement.Test
 {
-    public class EmployeeServiceTests : IClassFixture<EmployeeServiceFixture>
+    [Collection("EmployeeServiceCollection")]
+    public class EmployeeServiceTests // : IClassFixture<EmployeeServiceFixture>
     {
         private readonly EmployeeServiceFixture _employeeServiceFixture;
 
