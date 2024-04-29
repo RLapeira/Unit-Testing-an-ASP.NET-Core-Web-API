@@ -17,7 +17,7 @@ namespace EmployeeManagement.Test
             // to clean up the setup code, if required
         }
 
-        [Fact]
+        [Fact(Skip = "Skipping this one for demo reasons.")]
         [Trait("Category", "EmployeeFactory_CreateEmployee_Salary")]
         public void CreateEmployee_ConstructInternalEmployee_SalaryMustBe2500()
         {
