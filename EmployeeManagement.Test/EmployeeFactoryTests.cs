@@ -3,6 +3,7 @@ using EmployeeManagement.DataAccess.Entities;
 
 namespace EmployeeManagement.Test
 {
+    [Collection("No parallelism")]
     public class EmployeeFactoryTests : IDisposable
     {
         private EmployeeFactory _employeeFactory;
@@ -99,6 +100,13 @@ namespace EmployeeManagement.Test
             Assert.IsType<ExternalEmployee>(employee);
             //Assert.IsAssignableFrom<Employee>(employee);
             // True if employee is an object of Employee or a subclass
+        }
+
+        [Fact]
+        public void SlowTest1()
+        {
+            Thread.Sleep(5000);
+            Assert.True(true);
         }
 
     }
